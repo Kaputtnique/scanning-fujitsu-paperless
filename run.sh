@@ -7,7 +7,7 @@ LOGDIR="./logs"
 mkdir -p "$LOGDIR"
 
 # --- Konfiguration ---
-SCANNER="fujitsu:fi-6130dj:119376" # place ur device name, which u can get with "scanimage -L"
+SCANNER="fujitsu:fi-6130dj:119376" # choose ur device name, which u can get with "scanimage -L"
 TMP_SCAN_DIR="/tmp/scans" 
 PAPERLESS_CONSUME="/path/to/consume" # change it how u like where u want to place ur pdf´s 
 RESOLUTION=300 
