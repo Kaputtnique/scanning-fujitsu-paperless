@@ -1,23 +1,24 @@
 #!/bin/bash
 set -euo pipefail
 
+
 # Logging-Verzeichnis
 LOGDIR="./logs"
 mkdir -p "$LOGDIR"
 
 # --- Konfiguration ---
-SCANNER="fujitsu:fi-6130dj:119376"
-TMP_SCAN_DIR="/tmp/scans"
-PAPERLESS_CONSUME="/path/to/consume"
-RESOLUTION=300
-MODE="Gray"
+SCANNER="fujitsu:fi-6130dj:119376" # place ur device name, which u can get with "scanimage -L"
+TMP_SCAN_DIR="/tmp/scans" 
+PAPERLESS_CONSUME="/path/to/consume" # change it how u like where u want to place ur pdf´s 
+RESOLUTION=300 
+MODE="Gray" 
 SOURCE="ADF Duplex"
 CONTRAST=20
 BRIGHTNESS=20
 LANGUAGES="deu+eng"
-MIN_BLACK=1  # Schwarzanteil in %, alles darunter gilt als leer
-# ----------------------
+MIN_BLACK=1  # Schwarzanteil in %, alles darunter gilt als leer  / % of black min of 1% 
 
+# ----------------------
 # Letzte Lognummer bestimmen
 LASTNUM=$(ls "$LOGDIR"/scan_*.log 2>/dev/null | \
    sed 's/.*scan_\([0-9]\+\)\.log/\1/' | \
